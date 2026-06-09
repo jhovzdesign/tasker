@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasker Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <h2>TASKER</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Clients</a>
+      <a href="#">Projects</a>
+      <a href="#">Comments</a>
+      <a href="#">Teams</a>
+      <a href="#">Analytics</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <header>
+      <h1>Task Management</h1>
+      <input id="search" placeholder="Search tasks">
+      <button onclick="addTask()">+ New Task</button>
+    </header>
+
+    <section class="stats">
+      <div class="card"><h3 id="total">0</h3><p>Total Tasks</p></div>
+      <div class="card"><h3 id="progress">0</h3><p>In Progress</p></div>
+      <div class="card"><h3 id="done">0</h3><p>Completed</p></div>
+    </section>
+
+    <section class="tasks">
+      <div class="toolbar">
+        <select id="filter" onchange="renderTasks()">
+          <option value="all">All</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+      </div>
+      <div id="taskList"></div>
+    </section>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
